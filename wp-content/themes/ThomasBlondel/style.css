@@ -1,0 +1,521 @@
+/*
+Theme Name: Thomas Blondel
+Author: Thomas Blondel
+Author URI: http://thomasblondel.fr/
+Version: 1.0
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Header
+ * 3.0 - Footer
+ * 4.0 - Homepage
+ * 5.0 - Blog
+ * 8.0 - 404
+ */
+
+@font-face {
+    font-family: 'OpenSans';
+  	src: url('fonts/OpenSans/OpenSans.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans';
+  	src: url('fonts/OpenSans/OpenSans-Bold.ttf')  format('truetype');
+  	font-weight: bold;
+}
+@font-face {
+    font-family: 'OpenSans';
+  	src: url('fonts/OpenSans/OpenSans-BoldItalic.ttf')  format('truetype');
+  	font-weight: bold;
+  	font-style: italic;
+}
+@font-face {
+    font-family: 'OpenSans';
+  	src: url('fonts/OpenSans/OpenSans-Italic.ttf')  format('truetype');
+  	font-style: italic;
+}
+@font-face {
+    font-family: 'OpenSans';
+  	src: url('fonts/OpenSans/OpenSans-Light.ttf')  format('truetype');
+  	font-weight: lighter;
+}
+@font-face {
+    font-family: 'OpenSans';
+  	src: url('fonts/OpenSans/OpenSansLight-Italic.ttf')  format('truetype');
+  	font-weight: lighter;
+  	font-style: italic;
+}
+
+/**
+ * 1.0 - Reset
+ */
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background-color: white;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	background: #f1f1f1;
+	font-family: 'OpenSans', sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	quotes: none;
+}
+
+a:focus {
+	outline: 2px solid #c1c1c1;
+	outline: 2px solid rgba(51, 51, 51, 0.3);
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a img {
+	border: 0;
+}
+
+.main{
+	width: 100%;
+	background: white;
+}
+
+.main .content{
+	width: 100%;
+}
+
+.clear{
+	clear: both;
+}
+
+/**
+ * 2.0 - Header
+ */
+
+header{
+	width: 100%;
+	height:	450px;
+	background-color: #ddd;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 15px 0 0 0;
+}
+
+@media screen and (min-width: 841px){
+	header .header-content{
+		width:430px;
+		margin: 0 0 0 26%;
+	}
+}
+@media screen and (max-width: 840px){
+	header .header-content{
+		width:420px;
+		margin: 0 auto;
+	}
+}
+
+header ul li{
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 10px 0 0;
+}
+
+header ul li a{
+	text-decoration: none;
+	color: #aaa;
+	text-transform: uppercase;
+}
+
+header ul li.selected a{
+	color: black;
+}
+
+header ul li a:hover{
+	color: black;
+}
+
+header .subheader{
+	margin: 50px 0 0 0;
+}
+
+header .subheader h1{
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 34px;
+}
+
+header .subheader .intro{
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	color: #aaa;
+	line-height: 20px;
+}
+
+/**
+ * 3.0 - Footer
+ */
+
+footer{
+	width: 100%;
+	height: 200px;
+	background-color: #2F2F2F;
+	padding: 40px 0 0 0;
+}
+
+footer .footer-content{
+	text-align: center;
+}
+
+footer .footer-content ul li{
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 10px 0 0;
+	font-weight: bold;
+}
+
+footer .footer-content ul li a{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+footer .footer-content .funny{
+	margin: 20px 0 0 0;
+	font-size:	14px;
+	color: #aaa;
+}
+
+footer .footer-content img{
+	margin: 10px 0 0 0;
+}
+
+footer .footer-content .copyright{
+	margin: 10px 0 0 0;
+	font-size:	14px;
+	color: #4D4D4D;
+}
+
+
+/**
+ * 4.0 - Homepage
+ */
+
+header.homepage{
+	background-image: url(images/01_Homepage_00.png);
+}
+
+
+@media screen and (min-width: 841px){
+	.main .content .hp-links{
+		width: 800px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 840px){
+	.main .content .hp-links {
+	}
+}
+
+@media screen and (min-width: 841px){
+	.main .content .hp-links .hp-link{
+		width: 50%;
+		float: left;
+		text-align: center;
+		padding: 40px 0 40px 0;
+	}
+}
+@media screen and (max-width: 840px){
+	.main .content .hp-links .hp-link{
+		text-align: center;
+		padding: 40px 0 40px 0;
+	}
+}
+
+.main .content .hp-links .hp-link img{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.main .content .hp-links .hp-link h3{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 20px 0 0 0;
+}
+
+.main .content .hp-links .hp-link .description{
+	font-size: 16px;
+	margin: 15px auto 0 auto;
+	color: #aaa;
+}
+
+.main .content .portfolio{
+	width: 100%;
+	padding: 50px 0 50px 0;
+	background-color: #F6F6F6;
+}
+
+.main .content .portfolio .portfolio-content{
+	text-align: center;
+}
+
+.main .content .portfolio .portfolio-content a{
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #57E6C3;
+	border: 2px solid #57E6C3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px 10px 12px 10px;
+}
+
+.main .content .portfolio .portfolio-content a span{
+	margin: 0 5px 0 0;
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+}
+
+.main .content .portfolio .portfolio-content a img{
+	vertical-align: middle;
+}
+
+/**
+ * 5.0 - Blog
+ */
+
+header.blog{
+	background-image: url(images/04_Blog_00.png);
+}
+
+
+.article-list{
+	padding: 50px 0;
+}
+
+@media screen and (min-width: 641px){
+	.article-list article.blog{
+		width: 620px;
+		margin: 0 auto 50px auto;
+	}
+}
+@media screen and (max-width: 640px){
+	.article-list article.blog{
+		width: 320px;
+		margin: 0 auto 50px auto;
+	}
+}
+
+
+@media screen and (min-width: 641px){
+	.article-list article.blog .img{
+		width: 300px;
+		height: 250px;
+		background-color: #aaa;
+		float: left;
+		position: relative;
+	}
+}
+@media screen and (max-width: 640px){
+	.article-list article.blog .img{
+		display: none;
+		width: 300px;
+		height: 250px;
+		background-color: #aaa;
+		float: left;
+		position: relative;
+	}
+}
+
+.article-list article.blog .img img.article-image{
+	width: 300px;
+	height: 250px;
+}
+
+
+.article-list article.blog .img.right{
+	float:right;
+}
+
+.article-list article.blog .description{
+	width: 320px;
+	height: 250px;
+	padding: 10px;
+	background-color: #eee;
+	float: left;
+}
+
+.article-list article.blog .description h3{
+	font-size: 20px;
+	color: #4D4D4D;
+	margin: 10px 0 0 10px;
+}
+
+.article-list article.blog .description a{
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #57E6C3;
+	border: 2px solid #57E6C3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px 10px 12px 10px;
+	margin: 0 0 0 10px;
+}
+
+.article-list article.blog .description a span{
+	margin: 0 5px 0 0;
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+}
+
+.article-list article.blog .description a img{
+	vertical-align: middle;
+}
+
+.article-list article.blog .description .date{
+	font-size: 12px;
+	color: #aaa;
+	margin: 0 0 0 10px;
+}
+
+.article-list article.blog .description .contenu{
+	font-size: 15px;
+	color: #aaa;
+	margin: 20px 0 40px 10px;
+}
+
+.article-list .pagination{
+	width: 320px;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+	color: #aaa;
+}
+
+.article-list .pagination .current{
+	font-weight: bold;
+	font-size: 16px;
+	color: #4D4D4D;
+	margin: 0 10px 0 0;
+}
+
+.article-list .pagination a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #aaa;
+	margin: 0 10px 0 0;
+}
+
+.post-content{
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+/**
+ * 8.0 - 404
+ */
+
+.page-404{
+	width: 50%;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+.page-404 h1{
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.page-404 h2{
+	font-size: 45px;
+	font-weight: bold;
+	font-style: italic;
+}
