@@ -503,19 +503,18 @@ header.blog{
  * 8.0 - 404
  */
 
+header.error404{
+	background-image: url(images/07_404_00.png);
+}
+
 .page-404{
 	width: 50%;
 	margin: 0 auto;
-	padding: 100px 0;
+	padding: 70px 0;
 }
 
 .page-404 h1{
-	font-size: 80px;
+	font-size: 150px;
 	font-weight: bold;
-}
-
-.page-404 h2{
-	font-size: 45px;
-	font-weight: bold;
-	font-style: italic;
+	color: #ccc;
 }

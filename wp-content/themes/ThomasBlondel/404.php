@@ -1,6 +1,7 @@
-<?php $GLOBALS['page']="404" ?>
+<?php $GLOBALS['page']="error404" ?>
 <?php get_header(); ?>
 		<div class="subheader">
+			<?php echo get_page(55)->post_content ?>
 		</div>
 	</div>
 </header>
@@ -8,7 +9,6 @@
 	<div class="content">
 		<div class="page-404">
 			<h1>404</h1>
-			<h2>Vous semblez perdu.</h2>
 		</div>
 	</div>
 </div>
