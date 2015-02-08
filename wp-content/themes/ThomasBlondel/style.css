@@ -501,6 +501,7 @@ header.blog{
 
 .post-content .share{
 	width: 70%;
+	min-width: 230px;
 	margin: 30px auto 20px auto;
 	border-top: 1px solid #ccc;
 	padding: 20px 0;
