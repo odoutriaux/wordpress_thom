@@ -72,7 +72,7 @@ Template Name: Portfolio
 					) );
 				?>	
 			</div>
-			<a href="#" id="backtotop">
+			<a href="#" id="backtotop" onclick="return false;">
 				<span>Haut de page</span>
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/03_Portfolio_05.png" alt="portfolio-image"/>
 			</a>	
