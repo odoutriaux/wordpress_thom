@@ -12,8 +12,8 @@
 				<div class="links">
 					<ul>
 						<li <?php if (isset($GLOBALS['page-selected']) && $GLOBALS['page']=="homepage") echo "class=\"selected\""?>><a href="/wordpress_thom/">Profil</a></li>
-						<li <?php if (isset($GLOBALS['page-selected']) && $GLOBALS['page']=="portfolio") echo "class=\"selected\""?>><a href="<?php echo get_permalink(60) ?>">Portfolio</a></li>
-						<li <?php if (isset($GLOBALS['page-selected']) && $GLOBALS['page']=="blog") echo "class=\"selected\""?>><a href="<?php echo get_permalink(28) ?>">Blog</a></li>
+						<li <?php if (isset($GLOBALS['page-selected']) && $GLOBALS['page']=="portfolio") echo "class=\"selected\""?>><a href="<?php echo get_permalink(get_page_by_title('Portfolio')->ID) ?>">Portfolio</a></li>
+						<li <?php if (isset($GLOBALS['page-selected']) && $GLOBALS['page']=="blog") echo "class=\"selected\""?>><a href="<?php echo get_permalink(get_page_by_title('Blog')->ID) ?>">Blog</a></li>
 						<li <?php if (isset($GLOBALS['page-selected']) && $GLOBALS['page']=="contact") echo "class=\"selected\""?>><a href="/wordpress_thom/contact/">Contact</a></li>
 					</ul>
 				</div>

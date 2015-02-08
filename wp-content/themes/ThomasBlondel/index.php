@@ -19,7 +19,7 @@
 		</div>
 		<div class="portfolio-button">
 			<div class="portfolio-button-content">
-				<a href="<?php echo get_permalink(60) ?>">
+				<a href="<?php echo get_permalink(get_page_by_title('Portfolio')->ID) ?>">
 					<span>Mon portfolio</span>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/01_Homepage_10.png" alt="portfolio-image"/>
 				</a>

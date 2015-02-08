@@ -391,6 +391,11 @@ header.blog{
 	}
 }
 
+.article-list article:last-child{
+	margin: 0 auto;
+}
+
+
 
 @media screen and (min-width: 641px){
 	.article-list article.blog .img{
