@@ -33,7 +33,14 @@ Template Name: Portfolio
 			<div class="portfolio <?php if ($i%2==1) echo " grey"; else echo " white"; ?>">
 				<article class="portfolio-content <?php if ($i%2==1) echo " right" ?>">
 					<div class="img<?php if ($i%2==1) echo " right" ?>">
-						<img class="article-image" src="<?php bloginfo('stylesheet_directory'); ?>/images/01_Homepage_03.png"/>
+						<?php $imagePhysicalPath = get_theme_root()."/ThomasBlondel/images/portfolio/".$post->post_name.".png"; ?>
+						<?php $imagePath         = get_stylesheet_directory_uri()."/images/portfolio/".$post->post_name.".png"; ?>
+						<?php $imagePathDefault  = get_stylesheet_directory_uri()."/images/00_Image_Default.png";?>
+						<?php if(file_exists($imagePhysicalPath)): ?>
+							<img class="article-image" src="<?php echo $imagePath; ?>"/>
+						<?php else: ?>
+							<img class="article-image" src="<?php echo $imagePathDefault; ?>"/>
+						<?php endif; ?>
 					</div>
 					<div class="description">
 						<h3><?php the_title(); ?></h3>

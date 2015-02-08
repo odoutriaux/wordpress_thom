@@ -199,6 +199,7 @@ header ul li{
 	display: inline-block;
 	font-size: 14px;
 	margin: 0 10px 0 0;
+	font-weight: bold;
 }
 
 header ul li a{
@@ -342,7 +343,7 @@ header.homepage{
 }
 
 .main .content .portfolio-button .portfolio-button-content a{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -358,7 +359,7 @@ header.homepage{
 	margin: 0 5px 0 0;
 	display: inline-block;
 	vertical-align: middle;
-	height: 16px;
+	height: 20px;
 }
 
 .main .content .portfolio-button .portfolio-button-content a img{
@@ -442,7 +443,7 @@ header.blog{
 }
 
 .article-list article.blog .description a{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -543,7 +544,7 @@ header.blog{
 }
 
 .back-to-blog .back-to-blog-content a{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -663,8 +664,6 @@ header.portfolio{
 	}
 }
 
-
-
 .article-list-portfolio article.portfolio-content .description h3{
 	font-size: 20px;
 	color: #4D4D4D;
@@ -672,7 +671,7 @@ header.portfolio{
 }
 
 .article-list-portfolio article.portfolio-content .description a{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -689,7 +688,7 @@ header.portfolio{
 	margin: 0 5px 0 0;
 	display: inline-block;
 	vertical-align: middle;
-	height: 16px;
+	height: 20px;
 }
 
 .article-list-portfolio article.portfolio-content .description a img{
@@ -733,6 +732,40 @@ a#backtotop span{
 }
 
 a#backtotop img{
+	vertical-align: middle;
+}
+
+.back-to-portfolio{
+	width: 100%;
+	padding: 50px 0 50px 0;
+	background-color: #F6F6F6;
+}
+
+.back-to-portfolio .back-to-portfolio-content{
+	text-align: center;
+}
+
+.back-to-portfolio .back-to-portfolio-content a{
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #57E6C3;
+	border: 2px solid #57E6C3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px 10px 12px 10px;
+}
+
+.back-to-portfolio .back-to-portfolio-content a span{
+	margin: 0 5px 0 0;
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+}
+
+.back-to-portfolio .back-to-portfolio-content a img{
 	vertical-align: middle;
 }
 

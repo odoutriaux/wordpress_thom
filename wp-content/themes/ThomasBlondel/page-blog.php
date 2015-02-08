@@ -32,7 +32,14 @@ Template Name: Blog
 			foreach ( $the_query->posts as $post ) : setup_postdata( $post ); ?>
 				<article class="blog">
 					<div class="img<?php if ($i%2==1) echo " right" ?>">
-						<img class="article-image" src="<?php bloginfo('stylesheet_directory'); ?>/images/01_Homepage_03.png"/>
+						<?php $imagePhysicalPath = get_theme_root()."/ThomasBlondel/images/blog/".$post->post_name.".png"; ?>
+						<?php $imagePath         = get_stylesheet_directory_uri()."/images/blog/".$post->post_name.".png"; ?>
+						<?php $imagePathDefault  = get_stylesheet_directory_uri()."/images/00_Image_Default.png";?>
+						<?php if(file_exists($imagePhysicalPath)): ?>
+							<img class="article-image" src="<?php echo $imagePath; ?>"/>
+						<?php else: ?>
+							<img class="article-image" src="<?php echo $imagePathDefault; ?>"/>
+						<?php endif; ?>
 					</div>
 					<div class="description">
 						<h3><?php the_title(); ?></h3>
@@ -50,20 +57,24 @@ Template Name: Blog
 				endforeach; 
 				wp_reset_postdata();
 			?>
-			<div class="pagination">
-				<?php
-					$big = 999999999; // need an unlikely integer
-
-					echo paginate_links( array(
-						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-						'format' => '?paged=%#%',
-						'current' => max( 1, get_query_var('paged') ),
-						'total' => $the_query->max_num_pages,
-						'prev_text'    => __('<'),
-	    				'next_text'    => __('>'),
-					) );
-				?>	
-			</div>	
+			<?php 
+				$big = 999999999;
+				$pagination = paginate_links( array(
+					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format' => '?paged=%#%',
+					'current' => max( 1, get_query_var('paged') ),
+					'total' => $the_query->max_num_pages,
+					'prev_text'    => __('<'),
+    				'next_text'    => __('>'),
+				) );
+			?>
+			<?php if (!empty($pagination)): ?>
+				<div class="pagination">
+					<?php
+						echo $pagination;
+					?>	
+				</div>	
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
