@@ -2,7 +2,7 @@
 <?php $GLOBALS['page-selected']="homepage" ?>
 <?php get_header(); ?>
 		<div class="subheader">
-			<?php echo get_page(5)->post_content ?>
+			<?php echo get_page_by_title('homepage-introduction')->post_content ?>
 		</div>
 	</div>
 </header>
@@ -10,16 +10,16 @@
 	<div class="content">
 		<div class="hp-links">
 			<div class="hp-link">
-				<?php echo get_page(19)->post_content ?>
+				<?php echo get_page_by_title('homepage-first-bloc')->post_content ?>
 			</div>
 			<div class="hp-link">
-				<?php echo get_page(21)->post_content ?>
+				<?php echo get_page_by_title('homepage-second-bloc')->post_content ?>
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="portfolio">
-			<div class="portfolio-content">
-				<a href="/wordpress_thom/portfolio/">
+		<div class="portfolio-button">
+			<div class="portfolio-button-content">
+				<a href="<?php echo get_permalink(60) ?>">
 					<span>Mon portfolio</span>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/01_Homepage_10.png" alt="portfolio-image"/>
 				</a>

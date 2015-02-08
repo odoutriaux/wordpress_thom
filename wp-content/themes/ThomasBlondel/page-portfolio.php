@@ -1,27 +1,27 @@
 <?php
 /*
-Template Name: Blog
+Template Name: Portfolio
 */
 ?>
 
-<?php $GLOBALS['page']="blog" ?>
-<?php $GLOBALS['page-selected']="blog" ?>
+<?php $GLOBALS['page']="portfolio" ?>
+<?php $GLOBALS['page-selected']="portfolio" ?>
 <?php get_header(); ?>
 		<div class="subheader">
-			<?php echo get_page_by_title('blog-introduction')->post_content ?>
+			<?php echo get_page_by_title('portfolio-introduction')->post_content ?>
 		</div>
 	</div>
 </header>
 <div class="main">
 	<div class="content">
-		<div class="article-list">
+		<div class="article-list-portfolio">
 			<?php
 
 			$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
 			$args = array( 
-				'posts_per_page' => 6,
-				'category_name' => 'blog',
+				'posts_per_page' => 3,
+				'category_name' => 'portfolio',
 				'paged' => $paged, 
 			);
 
@@ -30,21 +30,22 @@ Template Name: Blog
 			$cpt=1;
 
 			foreach ( $the_query->posts as $post ) : setup_postdata( $post ); ?>
-				<article class="blog">
+			<div class="portfolio <?php if ($i%2==1) echo " grey"; else echo " white"; ?>">
+				<article class="portfolio-content <?php if ($i%2==1) echo " right" ?>">
 					<div class="img<?php if ($i%2==1) echo " right" ?>">
 						<img class="article-image" src="<?php bloginfo('stylesheet_directory'); ?>/images/01_Homepage_03.png"/>
 					</div>
 					<div class="description">
 						<h3><?php the_title(); ?></h3>
-						<span class="date"><?php echo date("d.m.y",strtotime($post->post_date)); ?></span>
 						<div class="contenu"><?php the_excerpt(); ?></div>
 						<a href="<?php echo get_permalink(get_the_ID()) ?>">
-							<span>Lire l'article</span>
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/05_Blog_03.png" alt="Lire l'article"/>
+							<span>Voir le projet</span>
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/03_Portfolio_03.png" alt="Voir le projet"/>
 						</a>
 					</div>
 					<div class="clear"></div>
 				</article>
+			</div>
 			<?php 
 				$i++;
 				endforeach; 
@@ -63,7 +64,11 @@ Template Name: Blog
 	    				'next_text'    => __('>'),
 					) );
 				?>	
-			</div>	
+			</div>
+			<a href="#" id="backtotop">
+				<span>Haut de page</span>
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/03_Portfolio_05.png" alt="portfolio-image"/>
+			</a>	
 		</div>
 	</div>
 </div>

@@ -1,7 +1,7 @@
 <?php $GLOBALS['page']="error404" ?>
 <?php get_header(); ?>
 		<div class="subheader">
-			<?php echo get_page(55)->post_content ?>
+			<?php echo get_page_by_title('404-introduction')->post_content ?>
 		</div>
 	</div>
 </header>
