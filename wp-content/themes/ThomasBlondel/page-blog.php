@@ -32,13 +32,10 @@ Template Name: Blog
 			foreach ( $the_query->posts as $post ) : setup_postdata( $post ); ?>
 				<article class="blog">
 					<div class="img<?php if ($i%2==1) echo " right" ?>">
-						<?php $imagePhysicalPath = get_theme_root()."/ThomasBlondel/images/blog/".$post->post_name.".png"; ?>
-						<?php $imagePath         = get_stylesheet_directory_uri()."/images/blog/".$post->post_name.".png"; ?>
-						<?php $imagePathDefault  = get_stylesheet_directory_uri()."/images/00_Image_Default.png";?>
-						<?php if(file_exists($imagePhysicalPath)): ?>
-							<img class="article-image" src="<?php echo $imagePath; ?>"/>
+						<?php if(has_post_thumbnail($post->ID)): ?>
+							<?php the_post_thumbnail('large',array('class'=>'article-image')) ?>
 						<?php else: ?>
-							<img class="article-image" src="<?php echo $imagePathDefault; ?>"/>
+							<img class="article-image" src="<?php bloginfo('stylesheet_directory'); ?>/images/00_Image_Default.png"/>
 						<?php endif; ?>
 					</div>
 					<div class="description">

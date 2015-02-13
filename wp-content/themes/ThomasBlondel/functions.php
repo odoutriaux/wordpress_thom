@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'post-thumbnails', array('post'));
+
 function custom_excerpt_length( $length ) {
 	return 25;
 }

@@ -7,7 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id="wrapper">
-		<header class="<?php if(isset($GLOBALS['page'])) echo $GLOBALS['page'] ?>">
+		<header class="<?php if(isset($GLOBALS['page'])) echo $GLOBALS['page'] ?>" <?php if(isset($GLOBALS['header-background'])) echo $GLOBALS['header-background']; ?>>
 			<div class="header-content">
 				<div class="links">
 					<ul>

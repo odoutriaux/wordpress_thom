@@ -1,12 +1,17 @@
-<?php $GLOBALS['page']="blog" ?>
-<?php $GLOBALS['page-selected']="blog" ?>
-<?php get_header(); ?>
+
 <?php if (have_posts()) : ?> 
-			<?php while (have_posts()) : setup_postdata(the_post());?> 
+	<?php while (have_posts()) : setup_postdata(the_post());?> 
+		<?php $GLOBALS['page']="blog" ?>
+		<?php $GLOBALS['page-selected']="blog" ?>
+		<?php $GLOBALS['header-background']="style=\"background-image: url('".wp_get_attachment_url(get_post_thumbnail_id($post->ID))."');\""?>
+		<?php get_header(); ?>
 		<div class="subheader">
 			<h1><?php echo $post->post_title ?></h1>
 			<div class="intro date">
 				<?php echo date("d.m.y",strtotime($post->post_date)); ?>
+			</div>
+			<div class="intro">
+				<?php echo $post->post_excerpt; ?>
 			</div>
 		</div>
 	</div>
