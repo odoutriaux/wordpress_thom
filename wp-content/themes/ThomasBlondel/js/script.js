@@ -10,7 +10,7 @@ $( document ).ready(function() {
         if($(window).scrollTop()==0){
             $('#backtotop').fadeOut();
         }
-        if($(window).scrollTop()>100) {
+        if($(window).scrollTop()>1000) {
             $('#backtotop').fadeIn();
         }
     });

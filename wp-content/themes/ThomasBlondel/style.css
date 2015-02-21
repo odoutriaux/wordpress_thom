@@ -222,7 +222,7 @@ header .subheader{
 }
 
 header .subheader h1{
-	font-size: 30px;
+	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: bold;
 	line-height: 34px;
@@ -440,7 +440,8 @@ header.blog{
 .article-list article.blog .description h3{
 	font-size: 20px;
 	color: #4D4D4D;
-	margin: 10px 0 0 10px;
+	margin: 5px 0 0 10px;
+	font-weight: bold;
 }
 
 .article-list article.blog .description a{
@@ -469,7 +470,7 @@ header.blog{
 }
 
 .article-list article.blog .description .date{
-	font-size: 12px;
+	font-size: 14px;
 	color: #aaa;
 	margin: 0 0 0 10px;
 }
@@ -511,9 +512,9 @@ header.blog{
 .post-content .share{
 	width: 70%;
 	min-width: 230px;
-	margin: 30px auto 20px auto;
+	margin: 50px auto 0 auto;
 	border-top: 1px solid #ccc;
-	padding: 20px 0;
+	padding: 20px 0 0 0;
 	text-align: center;
 }
 
@@ -566,6 +567,94 @@ header.blog{
 
 .back-to-blog .back-to-blog-content a img{
 	vertical-align: middle;
+}
+
+.article-top{
+	width: 650px;
+	margin: 0 auto 30px auto;
+	font-size: 14px;
+	color: #AAA;
+}
+
+.article-top h2{
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	color: black;
+}
+
+.article-top p{
+	margin: 0 0 10px 0;
+}
+
+.article-body{
+	width: 650px;
+	margin: 0 auto 30px auto;
+	font-size: 14px;
+	color: #AAA;
+}
+
+.article-body h3{
+	font-size: 24px;
+	margin: 0 0 10px 0;
+	color: black;
+}
+
+.article-body p{	
+	margin: 0 0 10px 0;
+}
+
+.article-body ul{
+	list-style-type: disc;
+	margin: 0 0 0 40px;
+}
+
+.article-image{
+	width: 650px;
+	margin: 0 auto 30px auto;
+	font-size: 14px;
+	color: #AAA;
+}
+
+.article-image h4{
+	font-size: 20px;
+	margin: 0 0 10px 0;
+	color: black;
+}
+
+.article-image .image{
+	float: left;
+}
+
+.article-image .legende{
+	float: right;
+	width: 230px;
+	padding: 20px 10px;
+}
+
+.article-image p{
+	margin: 0 0 10px 0;
+}
+
+.article-top a, .article-body a, .article-image a, .article-footer a{
+	color: #57E6C3;
+}
+
+.article-footer{
+	width: 650px;
+	margin: 0 auto 30px auto;
+	font-size: 14px;
+	color: #AAA;	
+}
+
+.article-footer h5{
+	font-size: 18px;
+	margin: 0 0 10px 0;
+}
+
+.article-footer-body{
+	background-color: #EEE;
+	padding: 20px 20px;
 }
 
 /**
@@ -763,7 +852,7 @@ a#backtotop img{
 	margin: 0 5px 0 0;
 	display: inline-block;
 	vertical-align: middle;
-	height: 16px;
+	height: 20px;
 }
 
 .back-to-portfolio .back-to-portfolio-content a img{
@@ -794,7 +883,7 @@ a#backtotop img{
 
 .post-content .portfolio-top .mission p, .post-content .portfolio-top .informations p{
 	color: #AAA;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .post-content .main-image{
@@ -808,7 +897,7 @@ a#backtotop img{
 
 .post-content .main-image p{
 	color: #AAA;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .post-content .secondary-images{
@@ -828,7 +917,7 @@ a#backtotop img{
 
 .post-content .secondary-images .secondary-image p{
 	color: #AAA;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 /**
@@ -895,6 +984,7 @@ header.contact{
 	width: 400px;
 	padding: 10px 0;
 	font-size: 16px;
+	font-family: 'OpenSans', sans-serif;
 }
 
 .contact-content .form button.submit{
@@ -913,9 +1003,40 @@ header.contact{
 	background-color: white;
 	background-image: url(images/02_Contact_09.png);
 	background-repeat: no-repeat;
-	background-position: 206px 8px;
+	background-position: 184px 8px;
 	cursor: pointer;
 	line-height: 20px;
+}
+
+.contact-content .form .input-container textarea{
+	color: #AAA;
+	border: 0;
+	border-bottom: 1px solid #DDD;
+	width: 400px;
+	padding: 10px 0;
+	font-size: 16px;
+	font-family: 'OpenSans', sans-serif;
+}
+
+.contact-content .error.message{
+	padding: 5px 0 0 0;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	color: #F99797;
+}
+
+.contact-content .error.message.main{
+	padding: 0 0 10px 0;
+}
+
+.contact-content .form .input-container.error textarea, .contact-content .form .input-container.error input{
+	border-bottom: 1px solid #F99797;
+}
+
+.contact-content .form .input-container textarea:focus, .contact-content .form .input-container input:focus,
+.contact-content .form button:focus{
+	outline: 0;
 }
 
 /**

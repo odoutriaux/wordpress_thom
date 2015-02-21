@@ -29,13 +29,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="back-to-blog">
-			<div class="back-to-blog-content">
-				<a href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">
-					<span>Retour au blog</span>
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/05_Blog_03.png" alt="blog-image"/>
-				</a>
-			</div>
+	</div>
+	<div class="back-to-blog">
+		<div class="back-to-blog-content">
+			<a href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">
+				<span>Retour au blog</span>
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/05_Blog_03.png" alt="blog-image"/>
+			</a>
 		</div>
 	</div>
 </div>
